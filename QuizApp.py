@@ -55,9 +55,8 @@ highscore = 40
 
 for question_data in QUESTIONS:
     q_num += 1
-    question, correct_answer, explanation = question_data
-    player_answer = input(f"Question {q_num}: {question}\n")
-    if player_answer == correct_answer:
+    is_correct, correct_answer, explanation, player_answer = ask_question(question_data, q_num)
+    if is_correct:
         num_correct += 1
         score += handle_correct_answer(explanation,num_correct)
 
