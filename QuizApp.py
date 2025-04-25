@@ -16,6 +16,7 @@ QUESTIONS = [
 
 ]
 
+#function that handles and returns the question data in the for loop
 def ask_question(question_data, question_number):
     question, correct_answer, explanation = question_data
     print(f"Question {question_number}: {question}")
