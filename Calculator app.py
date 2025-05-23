@@ -1,3 +1,13 @@
+from enum import Enum
+import operator
+
+
+class Operation(Enum):
+    ADD = operator.add
+    SUBTRACT = operator.sub
+    MULTIPLY = operator.mul
+    DIVISION = operator.truediv
+
 class Calculator:
     #add function
     def add (self,a,b):
