@@ -1,5 +1,6 @@
 from enum import Enum
 import operator
+from re import match
 
 
 class Operation(Enum):
@@ -9,19 +10,12 @@ class Operation(Enum):
     DIVISION = operator.truediv
 
 class Calculator:
-    #add function
-    def add (self,a,b):
-        sum_result = a+b
-        return sum_result
 
-    def subtract (self,a,b):
-        subtract_result = a-b
-        return subtract_result
+    def calculate(self, a, b, oper: Operation):
+        if oper == Operation.DIVISION and b == 0:
+            raise ZeroDivisionError("Cannot divide by zero.")
+        return oper.value(a, b)
 
-    def multiply (self,a,b):
-        multiply_result = a*b
-        return multiply_result
-
-    def divide (self,a,b):
-        divide_result = a/b
-        return divide_result
+#Main part of code, this will be where the operations are handled
+#Note: Come back to this once i have altered the Calculator Class then move to stage 2 of this project
+my_calculator = Calculator()
