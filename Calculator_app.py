@@ -17,5 +17,5 @@ class Calculator:
         return oper.value(a, b)
 
 #Main part of code, this will be where the operations are handled
-#Note: Come back to this once i have altered the Calculator Class then move to stage 2 of this project
+#Note: Come back to this once I have altered the Calculator Class then move to stage 2 of this project
 my_calculator = Calculator()
