@@ -33,7 +33,20 @@ while True:
         oper_string = input("Enter operation (+, -, * , / ):")
 
         #Where i will assign the input of the string to an operation enum
-        if oper_string ==
+        selected_operation = None
+        if oper_string == "+":
+            selected_operation = Operation.ADD
+        elif oper_string == "-":
+            selected_operation = Operation.SUBTRACT
+        elif oper_string == "*":
+            selected_operation = Operation.MULTIPLY
+        elif oper_string == "/":
+            selected_operation = Operation.DIVISION
+        else:
+            print("Please enter a valid operation such as +, -, *, / ")
+            continue #returns to the start
+        #So the operation and the first number have been handled
+
 
 
 
